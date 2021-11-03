@@ -64,17 +64,6 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.all(10.0),
             child: Row(
               children: [
-                Container(
-                  width: 80.0,
-                  height: 80.0,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          image: chamados[index].img != null
-                              ? FileImage(File(chamados[index].img))
-                              : AssetImage("images/person.png"),
-                          fit: BoxFit.cover)),
-                ),
                 Padding(
                   padding: EdgeInsets.only(left: 10.0),
                   child: Column(
