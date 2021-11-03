@@ -118,19 +118,6 @@ class _ChamadoPageState extends State<ChamadoPage> {
                     _editedChamado.relator = text;
                   },
                 ),
-                GestureDetector(
-                  child: Container(
-                    width: 140.0,
-                    height: 140.0,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: _editedChamado.img != null
-                              ? FileImage(File(_editedChamado.img))
-                              : AssetImage("images/person.png"),
-                        )),
-                  ),
-                ),
               ],
             ),
           ),
