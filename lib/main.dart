@@ -1,4 +1,4 @@
-import 'package:projeto_banco/ui/contato_page.dart';
+import 'package:projeto_banco/ui/chamado_page.dart';
 import 'package:projeto_banco/ui/home_page.dart';
 import 'package:flutter/material.dart';
 

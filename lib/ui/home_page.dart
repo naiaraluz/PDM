@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
-import 'package:projeto_banco/class_chamados/chamados.dart';
-import 'package:projeto_banco/ui/contato_page.dart';
+import 'package:projeto_banco/models/chamados.dart';
+import 'package:projeto_banco/ui/chamado_page.dart';
 import 'package:flutter/material.dart';
 //import 'package:url_launcher/url_launcher.dart';
 

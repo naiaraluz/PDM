@@ -1,4 +1,4 @@
-import 'package:projeto_banco/class_chamados/chamados.dart';
+import 'package:projeto_banco/models/chamados.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
