@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:path/path.dart';
+import 'package:projeto_banco/models/categoria.dart';
 import 'package:sqflite/sqflite.dart';
 
 // id name     email              phone    img
@@ -10,7 +11,7 @@ final String idChamado = "idChamado";
 final String tituloChamado = "tituloChamado";
 final String responsavelChamado = "responsavelChamado";
 final String interacaoChamado = "interacaoChamado";
-final String categoriaChamado = "categoriaChamado";
+final String categoriaChamado = "nomeCategoria";
 final String statusChamado = "statusChamado";
 final String imgChamado = "imgChamado";
 final String relatorChamado = "relatorChamado";
@@ -40,8 +41,10 @@ class ChamadoConect {
     return await openDatabase(path, version: 1,
         onCreate: (Database db, int newerVersion) async {
       await db.execute(
-          "CREATE TABLE $chamadosTable($idChamado INTEGER PRIMARY KEY, $tituloChamado TEXT, $responsavelChamado TEXT,"
-          "$interacaoChamado TEXT, $categoriaChamado TEXT, $statusChamado TEXT, $relatorChamado TEXT,  $imgChamado TEXT)");
+          "CREATE TABLE $chamadosTable($idChamado INTEGER PRIMARY KEY, $tituloChamado TEXT,"
+          "$responsavelChamado TEXT, $interacaoChamado TEXT, $nomeCategoria INTEGER, $statusChamado TEXT,"
+          "$relatorChamado TEXT,  $imgChamado TEXT,"
+          "FOREIGN KEY($categoriaChamado) REFERENCES $categoriaChamado($idCategoria))");
     });
   }
 
@@ -103,7 +106,7 @@ class Chamado {
   String titulo;
   String responsavel;
   String interacao;
-  String categoria;
+  Categoria categoria;
   String status;
   String relator;
   String img;

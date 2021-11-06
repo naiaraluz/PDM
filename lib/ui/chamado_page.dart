@@ -1,3 +1,4 @@
+import 'package:projeto_banco/models/categoria.dart';
 import 'package:projeto_banco/models/chamados.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
@@ -34,7 +35,7 @@ class _ChamadoPageState extends State<ChamadoPage> {
       _tituloController.text = _editedChamado.titulo;
       _responsavelController.text = _editedChamado.responsavel;
       _interacaoController.text = _editedChamado.interacao;
-      _categoriaController.text = _editedChamado.categoria;
+      _categoriaController.text = _editedChamado.categoria as String;
       _statusController.text = _editedChamado.status;
       _relatorController.text = _editedChamado.relator;
       _imgController.text = _editedChamado.img;
@@ -99,7 +100,7 @@ class _ChamadoPageState extends State<ChamadoPage> {
                   decoration: InputDecoration(labelText: "Categoria"),
                   onChanged: (text) {
                     _userEdited = true;
-                    _editedChamado.categoria = text;
+                    _editedChamado.categoria = text as Categoria;
                   },
                 ),
                 TextField(
